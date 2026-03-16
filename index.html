@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!--Here is the title in the browser-->
+  <title>Khemmoro Car Sales</title>
+<!--these are the files im using-->
+  <link rel="stylesheet" href="css/main.css" />
+  <link rel="stylesheet" href="css/layout.css" />
+  <link rel="stylesheet" href="css/filters.css" />
+  <link rel="stylesheet" href="css/cards.css" />
+
+  <script src="js/usedCars.js" defer></script>
+  <script src="js/main.js" defer></script>
+</head>
+<body>
+  <!--this is the header title on the website-->
+  <header class="site-header">
+    <div class="container">
+      <p class="header-label">Used Car Inventory</p>
+      <h1>Khemmoro Car Sales</h1>
+      <p class="subtitle">
+        Browse the current selection and filter it by the year, make, miles, price, and color.
+      </p>
+    </div>
+  </header>
+
+  <main class="container">
+    <!--heres the filtering part of the page-->
+    <section class="filters-section">
+      <h2>Filter Cars</h2>
+
+      <form id="filterForm" class="filter-form">
+        <div class="filter-grid">
+          <div class="filter-group">
+            <label for="minYear">Minimum Year</label>
+            <input type="number" id="minYear" name="minYear" placeholder="2016" />
+          </div>
+
+          <div class="filter-group">
+            <label for="maxYear">Maximum Year</label>
+            <input type="number" id="maxYear" name="maxYear" placeholder="2020" />
+          </div>
+
+          <div class="filter-group">
+            <label for="maxMileage">Maximum Mileage</label>
+            <select id="maxMileage" name="maxMileage">
+              <option value="">Any</option>
+              <option value="25000">Under 25,000</option>
+              <option value="30000">Under 30,000</option>
+              <option value="35000">Under 35,000</option>
+              <option value="40000">Under 40,000</option>
+              <option value="50000">Under 50,000</option>
+            </select>
+          </div>
+
+          <div class="filter-group">
+            <label for="minPrice">Minimum Price</label>
+            <input type="number" id="minPrice" name="minPrice" placeholder="15000" />
+          </div>
+
+          <div class="filter-group">
+            <label for="maxPrice">Maximum Price</label>
+            <input type="number" id="maxPrice" name="maxPrice" placeholder="30000" />
+          </div>
+        </div>
+        <!--here is the checkboxes for filtering-->
+        <fieldset class="checkbox-group">
+          <legend>Make</legend>
+          <div id="makeOptions" class="checkbox-options"></div>
+        </fieldset>
+
+        <fieldset class="checkbox-group">
+          <legend>Color</legend>
+          <div id="colorOptions" class="checkbox-options"></div>
+        </fieldset>
+        <!--here are the buttons to apply and reset filters-->
+        <div class="button-row">
+          <button type="submit" class="btn btn-primary">Apply Filters</button>
+          <button type="button" id="resetBtn" class="btn btn-secondary">Reset</button>
+        </div>
+      </form>
+    </section>
+
+    <section class="results-section">
+      <div class="results-top">
+        <h2>Available Cars</h2>
+        <p id="resultsCount" class="results-count"></p>
+      </div>
+        <!--heres what it says if nothing matches what we choose-->
+      <p id="noResultsMessage" class="no-results hidden">
+        No cars match your filter criteria. Please try again.
+      </p>
+
+      <section id="carListings" class="car-grid" aria-live="polite"></section>
+    </section>
+  </main>
+  <!--end of page assignemt title-->
+  <footer class="site-footer">
+    <div class="container">
+      <p>CSI 3150 Take Home Assignment 1</p>
+    </div>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,52 @@
+.site-header {
+  background-color: #111827;
+  color: white;
+  padding: 2.5rem 0;
+}
+
+.header-label {
+  margin-bottom: 0.5rem;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #cbd5e1;
+}
+
+.site-header h1 {
+  margin-bottom: 0.5rem;
+}
+
+.subtitle {
+  max-width: 700px;
+  color: #d1d5db;
+  margin-bottom: 0;
+}
+
+.filters-section,
+.results-section {
+  background-color: white;
+  border-radius: 14px;
+  padding: 1.5rem;
+  margin: 1.5rem 0;
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.08);
+}
+
+.results-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.results-count {
+  margin-bottom: 0;
+  color: #6b7280;
+  font-weight: 600;
+}
+
+.site-footer {
+  text-align: center;
+  color: #6b7280;
+  padding: 1rem 0 2rem;
+}
